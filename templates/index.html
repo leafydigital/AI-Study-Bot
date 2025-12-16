@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>LearningChatbot</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+<!-- Landing Screen -->
+<div id="landing" class="landing-container">
+  <h1>Hi, Welcome to <span>AI Study Bot</span></h1>
+
+  <div class="input-area landing-input">
+    <input id="landingInput"
+           placeholder="Ask academic questions only..."
+           onkeydown="handleLandingEnter(event)" />
+    <button onclick="startChat()">Send</button>
+  </div>
+
+  <div class="suggestions">
+    <button onclick="useSuggestion('Explain JavaScript')">Explain JavaScript</button>
+    <button onclick="useSuggestion('Explain DBMS')">Explain DBMS</button>
+    <button onclick="useSuggestion('Explain AI')">Explain AI</button>
+    <button onclick="useSuggestion('What is Pie Chart?')">What is Pie Chart?</button>
+  </div>
+</div>
+
+
+<div class="chat-container hidden">
+  <div class="header">📘 AI Study Bot</div>
+
+  <div id="chatBox" class="chat-box"></div>
+
+  <div class="input-area">
+    <input id="userInput"
+           placeholder="Ask academic questions only..."
+           onkeydown="handleEnter(event)" />
+    <button onclick="sendMessage()">Send</button>
+  </div>
+</div>
+
+
+<script src="/static/script.js"></script>
+</body>
+</html>
